@@ -4,28 +4,86 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## 2.0.4
+## 1.4.21
+### Changed
+ - Upgrade formiojs to 2.25.4
+
 ### Fixed
- - Prop type for i18n.
+ - Fix skipInit preventing default values being set on conditionally visible fields.
 
-## 2.0.3
-### Changed
- - Upgrade core renderer from 2.10.1 to 2.20.4
-
-## 2.0.2
-### Changed
- - Rebuild for failed build.
-
-## 2.0.1
+## 1.4.20
 ### Fixed
- - Allow adjusting submission while form is being created
- 
-## 2.0.0
+ - Fix crash of editgrid when using the default template that contains a util function.
+ - Fix crash of editgrid when not using skipInit that would attempt to change the array to an object.
+
+## 1.4.19
+### Fixed
+ - Day component didn't properly implement custom validations.
+
+## 1.4.18
+### Fixed
+ - Hiding items in editgrids didn't remove their values.
+
+## 1.4.17
 ### Changed
- - Renderer now based on formio.js Core Renderer.
- 
-### Removed
- - All helper libraries.
+ - Upgrade react-widgets version to 4.x.
+
+## 1.4.16
+### Changed
+ - Decrease animations to 10ms
+
+## 1.4.15
+### Fixed
+ - Crash in select resources if not json due to change in 1.4.14
+
+## 1.4.14
+### Fixed
+ - Fix performance of rendering select json components with lots of items in the json array.
+
+## 1.4.13
+### Fixed
+ - Select components with lots of json were slow to filter. Pre-rendering the data on load speeds it up.
+
+## 1.4.12
+### Fixed
+ - Datagrids and containers embedded within other datagrids and containers not setting values properly.
+
+## 1.4.11
+### Added
+ - Support for column definitions.
+
+## 1.4.10
+### Fixed
+ - Crash when empty rows are deleted from datagrids.
+
+## 1.4.9
+### Fixed
+ - Input masks not initializing validity properly.
+
+## 1.4.8
+### Fixed
+ - Select JSON with a value property not finding item when loading in a submission.
+
+## 1.4.7
+### Fixed
+ - Disable editgrid controls when form is read-only.
+ - Edit grid was not fully calculating validity on form load.
+
+## 1.4.6
+### Fixed
+ - Input mask not required for required fields.
+
+## 1.4.5
+### Fixed
+ - Edit grid editing was showing all fields as invalid.
+
+## 1.4.4
+### Fixed
+ - Fix issue where Select JSON fields couldn't set the value field.
+
+## 1.4.3
+### Fixed
+ - Fix issue where components in a container that hide at the same time can't fail to clear data.
 
 ## 1.4.2
 ### Changed
